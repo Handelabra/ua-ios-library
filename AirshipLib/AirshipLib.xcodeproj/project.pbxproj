@@ -258,6 +258,8 @@
 		E9F73FB412ADE93A003CF572 /* UA_ASIDataDecompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = E9F73FB212ADE93A003CF572 /* UA_ASIDataDecompressor.m */; };
 		E9FFDD8D129BAADB0012EF40 /* UADownloadContent.h in Headers */ = {isa = PBXBuildFile; fileRef = E9FFDD8B129BAADB0012EF40 /* UADownloadContent.h */; };
 		E9FFDD8E129BAADB0012EF40 /* UADownloadContent.m in Sources */ = {isa = PBXBuildFile; fileRef = E9FFDD8C129BAADB0012EF40 /* UADownloadContent.m */; };
+		FD02170D160B6FF500E9ABF1 /* UAAnimatedGif.h in Headers */ = {isa = PBXBuildFile; fileRef = FD02170B160B6FF500E9ABF1 /* UAAnimatedGif.h */; };
+		FD02170E160B6FF500E9ABF1 /* UAAnimatedGif.m in Sources */ = {isa = PBXBuildFile; fileRef = FD02170C160B6FF500E9ABF1 /* UAAnimatedGif.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -498,6 +500,8 @@
 		E9F73FB212ADE93A003CF572 /* UA_ASIDataDecompressor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UA_ASIDataDecompressor.m; sourceTree = "<group>"; };
 		E9FFDD8B129BAADB0012EF40 /* UADownloadContent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UADownloadContent.h; sourceTree = "<group>"; };
 		E9FFDD8C129BAADB0012EF40 /* UADownloadContent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UADownloadContent.m; sourceTree = "<group>"; };
+		FD02170B160B6FF500E9ABF1 /* UAAnimatedGif.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UAAnimatedGif.h; sourceTree = "<group>"; };
+		FD02170C160B6FF500E9ABF1 /* UAAnimatedGif.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UAAnimatedGif.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -838,6 +842,8 @@
 				D9983E8B1238462100B7E69F /* UAUtils.m */,
 				D9983E8F1238462100B7E69F /* UAObservable.h */,
 				D9983E8E1238462100B7E69F /* UAObservable.m */,
+				FD02170B160B6FF500E9ABF1 /* UAAnimatedGif.h */,
+				FD02170C160B6FF500E9ABF1 /* UAAnimatedGif.m */,
 				D9983E911238462100B7E69F /* UAAsycImageView.h */,
 				D9983E901238462100B7E69F /* UAAsycImageView.m */,
 				D9983E931238462100B7E69F /* UAViewUtils.h */,
@@ -1014,6 +1020,7 @@
 				BB42FB7B1509622700FC4B1B /* UALocationProviderDelegate.h in Headers */,
 				BB805C781523ACAD004FA950 /* UAContentURLCache+Internal.h in Headers */,
 				BB926B3D1540D1D000003975 /* UAAnalytics+Internal.h in Headers */,
+				FD02170D160B6FF500E9ABF1 /* UAAnimatedGif.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1306,6 +1313,7 @@
 				BBB87E3315057C7F00971CEC /* UAStandardLocationProvider.m in Sources */,
 				BBB87E3915057CF200971CEC /* UABaseLocationProvider.m in Sources */,
 				BB42FB7E150969F200FC4B1B /* UALocationCommonValues.m in Sources */,
+				FD02170E160B6FF500E9ABF1 /* UAAnimatedGif.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
