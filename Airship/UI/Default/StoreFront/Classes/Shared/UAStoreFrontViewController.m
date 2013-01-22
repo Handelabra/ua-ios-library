@@ -197,6 +197,35 @@ UIKIT_EXTERN NSString* const UIApplicationDidBecomeActiveNotification __attribut
     return result;
 }
 
+- (NSUInteger)supportedInterfaceOrientations {
+    NSUInteger result = UIInterfaceOrientationMaskAll;
+    
+    if ([UAStoreFrontUI shared].allowedUserInterfaceOrientations != nil)
+    {
+        result = 0;
+        
+        for (NSNumber *orientation in [UAStoreFrontUI shared].allowedUserInterfaceOrientations)
+        {
+            switch ([orientation intValue]) {
+                case UIInterfaceOrientationLandscapeLeft:
+                    result |= UIInterfaceOrientationMaskLandscapeLeft;
+                    break;
+                case UIInterfaceOrientationLandscapeRight:
+                    result |= UIInterfaceOrientationMaskLandscapeRight;
+                    break;
+                case UIInterfaceOrientationPortrait:
+                    result |= UIInterfaceOrientationMaskPortrait;
+                    break;
+                case UIInterfaceOrientationPortraitUpsideDown:
+                    result |= UIInterfaceOrientationMaskPortraitUpsideDown;
+                    break;
+            }
+        }
+    }
+
+    return result;
+}
+
 - (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation {
     [self.searchDisplayController.searchBar setNeedsLayout];
     [self.searchDisplayController.searchResultsTableView reloadData];
