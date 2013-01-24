@@ -25,7 +25,7 @@
 
 #import "UAStoreFrontUI.h"
 #import "UAStoreFrontViewController.h"
-#import "UAStoreFrontSplitViewController.h"
+#import "UAStoreFrontiPadViewController.h"
 
 static CGFloat const UAStoreFrontAnimationDuration = 0.5f;
 
@@ -134,9 +134,21 @@ static BOOL runiPhoneTargetOniPad = NO;
 
         if ((UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) && !runiPhoneTargetOniPad) {
             isiPad = YES;
-            UAStoreFrontSplitViewController *svc = [[UAStoreFrontSplitViewController alloc] init];
-            productListViewController = [[svc productListViewController] retain];
-            rootViewController = (UIViewController *)svc;
+            
+            UISplitViewController *svc = [[UISplitViewController alloc] init];
+            svc.delegate = self;
+            
+            productListViewController = [[UAStoreFrontiPadViewController alloc]
+                                    initWithNibName:@"UAStoreFrontiPad" bundle:nil];
+            
+            UINavigationController *navControllerForMasterViewController = [[UINavigationController alloc]
+                                                                            initWithRootViewController:productListViewController];
+            UINavigationController *navControllerForDetailViewController = [[UINavigationController alloc]
+                                                                            initWithRootViewController:productListViewController.detailViewController];
+            svc.viewControllers = [NSArray arrayWithObjects:navControllerForMasterViewController,
+                                                  navControllerForDetailViewController, nil];
+            
+            rootViewController = svc;
         } else {
             productListViewController = [[UAStoreFrontViewController alloc]
                                          initWithNibName:@"UAStoreFront" bundle:nil];
@@ -339,6 +351,10 @@ static BOOL runiPhoneTargetOniPad = NO;
     }
 
     return offset;
+}
+
+- (BOOL)splitViewController:(UISplitViewController *)svc shouldHideViewController:(UIViewController *)vc inOrientation:(UIInterfaceOrientation)orientation {
+    return NO;
 }
 
 

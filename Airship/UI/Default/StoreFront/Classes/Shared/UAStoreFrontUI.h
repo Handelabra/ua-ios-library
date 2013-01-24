@@ -38,7 +38,7 @@
  * This class is the reference implementation of the UAStoreFrontUIProtocol.
  */
 
-@interface UAStoreFrontUI : NSObject <UAStoreFrontUIProtocol> {
+@interface UAStoreFrontUI : NSObject <UAStoreFrontUIProtocol, UISplitViewControllerDelegate> {
 
     UIWindow *uaWindow;
 
