@@ -299,6 +299,10 @@ SINGLETON_INTERFACE(UAStoreFront)
  */
 - (BOOL)hasReceipt:(UAProduct *)product;
 /**
+ * Save receipts to plist.
+ */
+- (void)saveReceipts;
+/**
  * Returns YES if a directory exists at either of the passed path strings.
  * @param path A directory path as an NSString.
  * @param oldPath A directory path as an NSString.
